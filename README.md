@@ -1,15 +1,5 @@
 # LLM Fine-Tuning using Azure 
-A fine-tuning guide for both OpenAI and Open-Source Large Lauguage Models on Azure.
-
-## New
-🔥 New (2024-07-28): GPT-4 Fine-Tuning using Azure Machine Learning (Low-Code) Python SDK
-<a href="labs/fine_tuning_notebooks/gpt_fine_tuning/gpt_4_fine_tuning.ipynb">[Jump to the notebook]</a>
-
-🔥 New (2024-07-11): GPT-4 Fine-Tuning using Azure OpenAI UI Dashboard
-<a href="labs/fine_tuning_dashboards/gpt_4_fine_tuning_aoai_dashboard.md">[Jump to the Guide]</a>
-
-🔥 New (2024-07-04): Phi-3 Fine-Tuning using Azure Machine Learning (Low-Code) Python SDK
-<a href="labs/fine_tuning_notebooks/phi_fine_tuning/phi_3_mini_4k_instruct_fine_tuning.ipynb">[Jump to the notebook]</a>
+A fine-tuning guide for both OpenAI and Open-Source Large Lauguage Models on Azure. This repo. is designed to be user-friendly for people with non-technical background and for people with technical background such as Data Scientists and Machine Learning Engineers.
 
 ## What
 Fine-Tuning, or *Supervised Fine-Tuning*, retrains an existing pre-trained LLM using example data, resulting in a new "custom" fine-tuned LLM that has been optimized for the provided task-specific examples. 
@@ -34,15 +24,12 @@ You may consider Fine-Tuning when:
 
 ## Learning Path
 **Lab 1: LLM Fine-Tuning via *Dashboards***
-- [Lab 1.1](labs/fine_tuning_dashboards/gpt_3_fine_tuning_aoai_dashboard.md): Fine-Tuning GPT-3.5 Model (*1h duration*)
-- [Lab 1.2](labs/fine_tuning_dashboards/gpt_4_fine_tuning_aoai_dashboard.md): Fine-Tuning GPT-4 Model (*1h duration*)
-- [Lab 1.3](labs/fine_tuning_dashboards/llama2_fine_tuning_aml_dashboard.md): Fine-Tuning Llama2 Model (*1h duration*)
+- [Lab 1.1](labs/fine_tuning_dashboards/gpt_fine_tuning_aoai_dashboard.md): Fine-Tuning GPT Models (*1h duration*)
+- [Lab 1.2](labs/fine_tuning_dashboards/llama2_fine_tuning_aml_dashboard.md): Fine-Tuning Llama2 Models (*1h duration*)
 
 **Lab 2: LLM Fine-Tuning via *Python SDK***
-- [Lab 2.1](labs/fine_tuning_notebooks/gpt_fine_tuning/gpt_35_turbo_fine_tuning.ipynb): Fine-Tuning GPT-3.5 Model (*2h duration*)
-- [Lab 2.2](labs/fine_tuning_notebooks/gpt_fine_tuning/gpt_4_fine_tuning.ipynb): Fine-Tuning GPT-4 Model (*2h duration*)
-- [Lab 2.3](labs/fine_tuning_notebooks/llama_fine_tuning/llama_2_7b_fine_tuning.ipynb): Fine-Tuning Llama2 Model (*2h duration*)
-- [Lab 2.4](labs/fine_tuning_notebooks/phi_fine_tuning/phi_3_mini_4k_instruct_fine_tuning.ipynb): Fine-Tuning Phi-3 Model (*2h duration*) 
+- [Lab 2.1](labs/fine_tuning_notebooks/gpt_fine_tuning/gpt_35_turbo_fine_tuning.ipynb): Fine-Tuning GPT Models (*2h duration*)
+- [Lab 2.2](labs/fine_tuning_notebooks/llama2_fine_tuning/llama_2_7b_fine_tuning.ipynb): Fine-Tuning Llama2 Models (*2h duration*) 
 
 ## Contributing
 This project welcomes contributions and suggestions.  Most contributions require you to agree to a

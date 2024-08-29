@@ -1,16 +1,12 @@
-## Fine-Tuning GPT-4 Models - A Dashboard Experience
-Learn how to fine-tune a GPT-4 model using Azure OpenAI Studio - UI Dashboard.  
+## Fine-Tuning GPT Models - A Dashboard Experience
+Learn how to fine-tune a GPT model using Azure OpenAI Studio - UI Dashboard.  
 
 ### Prerequisites
 * Learn the [what, why, and when to use fine-tuning.](https://learn.microsoft.com/en-us/azure/ai-services/openai/concepts/fine-tuning-considerations)
 * An Azure subscription.
 * Access to Azure OpenAI Service.
 * An Azure OpenAI resource created in the supported fine-tuning region (e.g. Sweden Central).
-* GPT Models that support fine-tuning so far:
-  * *gpt-35-turbo-0613*
-  * *gpt-35-turbo-1106*
-  * *gpt-35-turbo-0125*
-  * *gpt-4-0613*
+* GPT Models that support fine-tuning so far: *gpt-35-turbo-0613* and *gpt-35-turbo-1106*.
 * Prepare Training and Validation datasets:
   * at least 50 high-quality samples (preferably 1,000s) are required.
   * must be formatted in the JSON Lines (JSONL) document with UTF-8 encoding.
@@ -23,10 +19,10 @@ You can check the MS Learn document [here](https://learn.microsoft.com/en-us/azu
 <ol><img src="https://learn.microsoft.com/en-us/azure/ai-services/openai/media/fine-tuning/studio-create-custom-model.png" alt="Screenshot of the Training data pane for the Create custom model wizard, with local file options." width="600"/></ol>
 
 ### Step 2: Select the *Base model*
-The first step in creating a custom model is to choose a base model. In this demo, we choose *gpt-4-0613*.
+The first step in creating a custom model is to choose a base model. 
 
-The **Base model** pane lets you choose a base model to use for your custom model. Select the base model *gpt-4 (0613)* from the **Base model type** dropdown, and then select **Next** to continue.
-<ol><img src="../images/screenshot-aoai-select-base-model.png" alt="Screenshot that shows how to select the base model in the Create custom model wizard in Azure OpenAI Studio." width="600"/></ol>
+The **Base model** pane lets you choose a base model to use for your custom model. Select the base model from the **Base model type** dropdown, and then select **Next** to continue.
+<ol><img src="https://learn.microsoft.com/en-us/azure/ai-services/openai/media/fine-tuning/base-model.png" alt="Screenshot that shows how to select the base model in the Create custom model wizard in Azure OpenAI Studio." width="600"/></ol>
 
 ### Step 3: Choose your *Training data*
 The next step is to choose your training data either from the previously uploaded one or by uploading a new one.
@@ -50,25 +46,25 @@ One can refer to the MS Learn document [here](https://learn.microsoft.com/en-us/
 
 ### Step 6: Review your choices and *Start Training job*
 If you're ready to train your model, select **Start Training job** to start the fine-tuning job and return to the **Models** pane.
-<ol><img src="../images/screenshot-aoai-review-model-and-data-before-training.png" alt="Screenshot of the Review pane for the Create custom model wizard in Azure OpenAI Studio." width="600"/></ol>
+<ol><img src="https://learn.microsoft.com/en-us/azure/ai-services/openai/media/fine-tuning/studio-review.png" alt="Screenshot of the Review pane for the Create custom model wizard in Azure OpenAI Studio." width="600"/></ol>
 
 You can check the status of the custom model in the **Status** column of the **Custom models** tab.
-<ol><img src="../images/screenshot-aoai-custom-model-running-status.png" alt="Screenshot of the Models pane from Azure OpenAI Studio, with a custom model fine-tuning status displayed." width="600"/></ol>
+<ol><img src="https://learn.microsoft.com/en-us/azure/ai-services/openai/media/fine-tuning/studio-models-job-running.png" alt="Screenshot of the Models pane from Azure OpenAI Studio, with a custom model displayed." width="600"/></ol>
 
 After you start a fine-tuning job, it can take some time to complete (from minutes to hours).
-<ol><img src="../images/screenshot-aoai-custom-model-running-status-with-evaluation-metrics.png" alt="Screenshot of the Models pane in Azure OpenAI Studio, with a custom model fine-tuning status with evaluation metrics displayed." width="600"/></ol>
+<ol><img src="https://learn.microsoft.com/en-us/azure/ai-services/openai/media/fine-tuning/studio-model-details.png" alt="Screenshot of the Models pane in Azure OpenAI Studio, with a custom model displayed." width="600"/></ol>
 
 ### Step 7: Deploy a custom model
 When the fine-tuning job succeeds, you can deploy the custom model from the **Models** pane to make it available for use with completion calls.
 
 To deploy your custom model, select the custom model to deploy, and then select **Deploy model**.
-<ol><img src="../images/screenshot-aoai-custom-model-running-status.png#lightbox
+<ol><img src="https://learn.microsoft.com/en-us/azure/ai-services/openai/media/fine-tuning/studio-models-deploy-model.png#lightbox
 " alt="Screenshot that shows how to deploy a custom model in Azure OpenAI Studio." width="600"/></ol>
 
 The **Deploy model** dialog box opens. 
 
 In the dialog box, enter your **Deployment name** and then select **Create** to start the deployment of your custom model.
-<ol><img src="../images/screenshot-aoai-deploy-model.png" alt="Screenshot of the Deploy Model dialog in Azure OpenAI Studio." width="600"/></ol>
+<ol><img src="https://learn.microsoft.com/en-us/azure/ai-services/openai/media/fine-tuning/studio-models-deploy.png" alt="Screenshot of the Deploy Model dialog in Azure OpenAI Studio." width="600"/></ol>
 
 ### Step 8: Test and use a deployed model
 After your custom model deploys, you can use it like any other deployed model. 
@@ -81,5 +77,5 @@ When you're done with your custom model, you can delete the deployment and model
 ### Step 10 (Optional): Continous fine-tuning
 Once you have created a fine-tuned model you may wish to continue to refine the model over time through further fine-tuning. Continuous fine-tuning is the iterative process of selecting an already fine-tuned model as a base model and fine-tuning it further on new sets of training examples.
 
-To perform fine-tuning on a model that you have previously fine-tuned you would use the same process as described in **Step 1**, but instead of specifying the name of a generic base model, you would specify your already fine-tuned model. A custom fine-tuned model would look like <code>gpt-4-0613.ft-5ff6852e38314f09bbb64b2aeb002f0a...</code>
-<ol><img src="../images/screenshot-aoai-continuous-fine-tuning-gpt4.png" alt="Screenshot of the continuous fine-tuning based on a pre-fine-tuned model UI." width="600"/></ol>
+To perform fine-tuning on a model that you have previously fine-tuned you would use the same process as described in **Step 1**, but instead of specifying the name of a generic base model, you would specify your already fine-tuned model. A custom fine-tuned model would look like <code>gpt-35-turbo-0613.ft-5fd1918ee65d4cd38a5dcf6835066ed7</code>
+<ol><img src="https://learn.microsoft.com/en-us/azure/ai-services/openai/media/fine-tuning/studio-continuous.png" alt="Screenshot of the Create a custom model UI with a fine-tuned model highlighted." width="600"/></ol>
